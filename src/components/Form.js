@@ -5,7 +5,7 @@ import './Form.css';
 
 function Form() {
 
-  const [user, setUser] = useState({name:"", id:"", email: "", password:"", gender: "", datetime:"", description:""})
+  const [user, setUser] = useState({name:"", id:"", email:"", password:"", gender:"", datetime:"", description:""})
   const [errors, setErrors] = useState({})
 
   function validate(){
@@ -92,7 +92,7 @@ function Form() {
         <label>Password:</label>
         <input type="password" name="password" value={user.password} onChange={(e) => handleChange(e)} required/>
 
-        <div className='Form__radio'>
+        <div className='Form__radio' value={user.gender}>
           <label>Gender:</label>
           <input type="radio" name="gender"  value="male" /> Male<br/>
           <input type="radio" name="gender"  value="female" /> Female<br/>
