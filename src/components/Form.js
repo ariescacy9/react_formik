@@ -34,6 +34,9 @@ function Form() {
         name:"",
         id:"",
         email: "",
+        password:"",
+        gender: "",
+        datetime:"",
         description:""
       })
     } else {
@@ -91,8 +94,8 @@ function Form() {
 
         <div className='Form__radio'>
           <label>Gender:</label>
-          <input type="radio" name="gender"  value={user.gender} checked onChange={(e) => handleChange(e)}/> Male<br/>
-          <input type="radio" name="gender"  value={user.gender} onChange={(e) => handleChange(e)}/> Female<br/>
+          <input type="radio" name="gender"  value="male" /> Male<br/>
+          <input type="radio" name="gender"  value="female" /> Female<br/>
         </div>
 
         <label>Fecha de nacimiento</label>
